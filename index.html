@@ -4,19 +4,67 @@
 	  <meta charset="UTF-8">
 	  <title>Reloj Digital</title>
 	  <link rel="stylesheet" href="css/main.css">
-	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=oswald:400.300,700">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
 
 	</head>
 	<body>
 		<div class="container">
-			<div class="wrap">
+			<div class="wrap time">
 				<div id="reloj" class="agrega"></div>
+				<div class="cajaBoton">
 					<button id="EligeZona" class="agregar btn btn-info">
-						<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
 					</button>
-				<div id="zonaHoraria"></div>
+				</div>
+					
+				<div id="zonaHoraria" class="zonaHoraria">
+					<div class="paises" name="Chicago">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Chicago
+					</div>
+					<div class="paises" name="Sao Paulo">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Sao Paulo
+					</div>
+					<div class="paises" name="Santiago">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Santiago
+					</div>
+					<div class="paises" name="Mexico D.F">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Mexico D.F
+					</div>
+					<div class="paises" name="Caracas">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Caracas
+					</div>
+					<div class="paises" name="Brasilia">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Brasilia
+					</div>
+					<div class="paises" name="Quito">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Quito
+					</div>
+					<div class="paises" name="Guayaquil">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Guayaquil
+					</div>
+					<div class="paises" name="Santa Marta">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Santa Marta
+					</div>
+					<div class="paises" name="Bogota">
+						<input type="checkbox" class="checkbox">&nbsp;
+						Bogota
+					</div>
+					<div class=" paises nuevacaja" name="boton">
+						<button id="EligeZona" class="agregar btn btn-info segundobtn">
+						Volver
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 

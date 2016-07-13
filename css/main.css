@@ -11,20 +11,54 @@ body {
 	height: 980px;
 }
 
-.agregaj {
+.agrega  {
 	font-size: 70px;
 	text-align: center;
-	margin: 50px 50px;
+	margin: 50px;
 	font-weight: bolder;
 	color: white;
 	width: 100%;
 }
 
+.cajaBoton {
+	text-align: center;
+}
+
 .agregar {
+	
 	width: 10%;
 	height: 50px;
+	left: 200px;
 } 
 
 .agregar span {
 	size: 50px;
 }
+
+.zonaHoraria {
+	width: 100%;
+	height: 800px;
+	margin-top: 30px;
+	display: none;
+	border-radius: 10px;
+}
+
+.paises {
+	background: #CDC8DC;
+	height: 30px;
+	margin: 0 170px;
+}
+
+.paises input {
+	margin: 20px 0 0 20px;
+	float: left;
+	margin-right: 20px;
+}
+
+.segundobtn {
+	width: 100%;
+	height: 50px;
+	left: 150px;
+}
+
+ 

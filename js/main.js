@@ -1,7 +1,7 @@
-function reloj (){
-	//Extraemos la hora del sistema, Normalmente es la misma hora del Navegador
+function reloj(){
 
-    var rTime= new Date();
+	//Extraemos la hora del sistema, Normalmente es la misma hora del Navegador
+	var rTime= new Date();
 	
 	//Extraemos cantidad de Horas
     var rHours= rTime.getHours();
@@ -14,7 +14,7 @@ function reloj (){
 	
 	//Mientras que los minutos sean menores que 10 concatenamos 0 a los minutos
     rMinutes=(rMinutes<10?"0" : "" ) + rMinutes;
-    rSeconds= ( rSeconds < 10 ? "0" : "" ) + rSeconds;
+    rSeconds= (rSeconds < 10 ? "0" : "") + rSeconds;
 	
 	//Aqui definimos si es Antes del Meridiano o Despues, basados en si las Horas son mayor a 12.
     var TimeOfDay= (rHours< 12)?"AM" : "PM";
@@ -26,89 +26,93 @@ function reloj (){
  
 	//Actualizamos div que tiene id reloj con el contenido que tiene la variable rTimeStr
     $("#reloj").html(rTimeStr);
+
 }
+
+$(document).ready(reloj);
+
 //Para que nuestra pagina ejecute la misma funcion cada 1 segundo 
 $(document).ready(function(){
-   setInterval('reloj()', 1000);
+   setInterval("reloj()", 1000);
 });
 
-/*$(document).ready(function(){
-	$("#EligeZona").live("click", function(){
-		alert("Eligue zona horaria")
-	});
+//Para mostrar en pantalla ciudades
+$(".agregar").on("click", function(){
+	$(".zonaHoraria").show();
 });
 
+//Al seleccionar ciudad hacer click en pantalla y ocultar div ciudades
+$(".segundobtn").on("click", function(){
+	$(".zonaHoraria").hide();
+});
 
+//Mostrar hora de las ciudades seleccionadas
 
+/*(function agregarHora(){
+	//funciones
+	var ciudades=[
+			{Id:"Chicago",
+			nombre:"Chicago",
+			zonaHoraria:-5}, 
 
-$(document.body)
-.append("<div class="reloj" data-offset="-5" data-label="Chicago" id="chicago"></div>");
-.append("<div class="reloj" data-offset="" data-label="SaoPaulo" id="SaoPaulo"></div>");
-.append("<div class="reloj" data-offset="-6" data-label="Santiago" id="Santiago"></div>");
-.append("<div class="reloj" data-offset="-5" data-label="Mexico D F" id="Mexico"></div>");
-.append("<div class="reloj" data-offset="-5" data-label="Caracas" id="Caracas"></div>");
-.append("<div class="reloj" data-offset="-3" data-label="Brasilia" id="Brasilia"></div>");
-.append("<div class="reloj" data-offset="-6" data-label="Quito" id="Quito"></div>");
-.append("<div class="reloj" data-offset="-4.5" data-label="Guayaquil" id="Guayaquil"></div>");
-.append("<div class="reloj" data-offset="-4.5" data-label="Santa Marta" id="SantaMarta"></div>");
-.append("<div class="reloj" data-offset="-4" data-label="Bogota" id="Bogota"></div>");
-
-
-
-
-$("zonaHoraria").nuevo{
-	var ciudades=[{
-		id:"Chicago",
-		nombre:"Chicago",
-		zonaHoraria:-5;
-		}, {
-			id:"SaoPaulo",
+			{id:"SaoPaulo",
 			nombre:"SaoPaulo",
-			zonaHoraria:-3;
-		}, {
-			id:"Santiago",
+			zonaHoraria:-3},
+
+			{id:"Santiago",
 			nombre:"Santiago",
-			zonaHoraria:-3;
-		}, {
-			id:"Mexico",
+			zonaHoraria:-4
+			}, 
+
+			{id:"Mexico",
 			nombre:"Mexico",
-			zonaHoraria:-5;
-		}, {
-			id:"Caracas",
+			zonaHoraria:-5
+			}, 
+
+			{id:"Caracas",
 			nombre:"Caracas",
-			zonaHoraria:-4.5;
-		}, {
-			id:"Brasilia",
+			zonaHoraria:-4
+			},
+
+			{id:"Brasilia",
 			nombre:"Brasilia",
-			zonaHoraria: ;
-		}, {
-			id:"Quito",
+			zonaHoraria: -3;
+			}, 
+
+			{id:"Quito",
 			nombre:"Quito",
-			zonaHoraria: -3;
-		}, {
-			id:"Guayaquil",
+			zonaHoraria: -5
+			}, 
+
+			{id:"Guayaquil",
 			nombre:"Guayaquil",
-			zonaHoraria: -3;
-		}, {
-			id:"SantaMaria",
+			zonaHoraria: -5
+			}, 
+
+			{id:"SantaMarta",
 			nombre:"SantaMaria",
-			zonaHoraria: -3;
-		}, {
-			id:"Bogota",
+			zonaHoraria: -5
+			},
+
+			{id:"Bogota",
 			nombre:"Bogota",
-			zonaHoraria: -3;
-		}];
+			zonaHoraria: -5
+			}]
+	var agregarHora=function(){};
+	var nuevaHora=function(){};
+	var mostrarHora=function(){};
+	//eventos
 
-		$(document).ready(function(){
-			createCheckBoxesCiudades();
-			setHoraLocal();
-
-			setInterval("setHoraLocal()", 1000);
-			setInterval("ciudades()", 1000);
-		});
-	}());*/
+	//agregar tarea
+	//btnNuevaTarea.addEventListener("click", agregarTarea);
 
 
+	//comprobar input
+	nuevaHora.addEventListener(mostrarHora);
+	for( var=ciudades; ciudades<=agregarHora.children.length-1; ciudades++){
+		agregarHora.children[ciudades].addEventListener(reloj);
+	}
 
+});*/
 
 
